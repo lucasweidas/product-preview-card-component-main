@@ -1,0 +1,67 @@
+@use '../abstracts' as *;
+
+.card {
+  --radius: 0.625rem;
+  width: min(100% - 2rem, rem(600));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  margin: 2rem auto;
+  overflow: hidden;
+  box-shadow: 0 rem(2) rem(20) rem(-4) rgba(black, 0.1);
+
+  &__img {
+    width: 100%;
+    display: block;
+  }
+
+  &__content {
+    width: 100%;
+    display: grid;
+    align-content: space-between;
+    row-gap: rem(14);
+    padding: clamp(rem(24), 6vw, rem(30));
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    column-gap: rem(20);
+    padding-block-start: 1rem;
+
+    .price__actual {
+      font-family: var(--font-fraunces);
+      font-size: var(--font-size-3);
+      color: var(--color-cyan-9);
+    }
+
+    .price__prev {
+      color: var(--color-blue-6);
+    }
+  }
+
+  &__button {
+    --color-background-hover: hsl(158, 36%, 20%);
+    height: rem(48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: rem(10);
+    background-color: var(--color-cyan-9);
+    border: none;
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    color: var(--color-white);
+    outline: none;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--color-background-hover);
+    }
+  }
+}

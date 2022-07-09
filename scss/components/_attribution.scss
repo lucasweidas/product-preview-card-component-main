@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.attribution {
+  padding: 1rem;
+  text-align: center;
+
+  a {
+    &:hover,
+    &:focus-visible {
+      color: var(--color-blue-9);
+      text-decoration: underline;
+    }
+  }
+
+  .fa-heart {
+    margin-inline: 0.125em;
+    color: var(--color-cyan-9);
+    animation: heart-pulse 2000ms linear infinite;
+
+    @keyframes heart-pulse {
+      0%,
+      100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+:root {
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-fraunces: 'Fraunces', serif;
+  --font-size-1: 0.875rem;
+  --font-size-2: 1rem;
+  --font-size-3: 1.875rem;
+}
+
+body {
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-1);
+  font-weight: 500;
+}
+
+h1,
+h2 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: var(--font-size-1);
+  font-weight: 500;
+  color: var(--color-blue-6);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+h2 {
+  font-family: var(--font-fraunces);
+  font-size: var(--font-size-3);
+  font-weight: 700;
+  color: var(--color-blue-9);
+}
+
+p {
+  font-size: var(--font-size-1);
+  color: var(--color-blue-6);
+  line-height: 1.7;
+}
