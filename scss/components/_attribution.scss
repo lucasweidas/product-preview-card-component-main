@@ -5,8 +5,7 @@
   text-align: center;
 
   a {
-    &:hover,
-    &:focus-visible {
+    &:where(:hover, :focus-visible) {
       color: var(--color-blue-9);
       text-decoration: underline;
     }

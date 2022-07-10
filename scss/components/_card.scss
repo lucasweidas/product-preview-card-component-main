@@ -2,14 +2,19 @@
 
 .card {
   --radius: 0.625rem;
-  width: min(100% - 2rem, rem(600));
+  --card-max-width: 28rem;
+  width: min(100% - 2rem, var(--card-max-width));
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
   background-color: var(--color-white);
   border-radius: var(--radius);
   margin: 2rem auto;
   overflow: hidden;
   box-shadow: 0 rem(2) rem(20) rem(-4) rgba(black, 0.1);
+
+  @include breakpoint(medium) {
+    --card-max-width: 37.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   &__img {
     width: 100%;
@@ -26,8 +31,9 @@
 
   &__price {
     display: flex;
+    flex-wrap: wrap-reverse;
     align-items: center;
-    column-gap: rem(20);
+    gap: rem(4) rem(20);
     padding-block-start: 1rem;
 
     .price__actual {
@@ -59,8 +65,7 @@
     cursor: pointer;
     transition: background-color 200ms ease;
 
-    &:hover,
-    &:focus-visible {
+    &:where(:hover, :focus-visible) {
       background-color: var(--color-background-hover);
     }
   }
