@@ -35,7 +35,6 @@ This is a solution to the [Product preview card component challenge on Frontend 
 - CSS Grid
 - CSS Flex
 - Mobile-first workflow
-- Pure JS
 - SASS-SCSS
 
 ## Author
