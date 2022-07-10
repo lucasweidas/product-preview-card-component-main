@@ -2,11 +2,12 @@
 
 .attribution {
   padding: 1rem;
+  color: var(--color-blue-9);
   text-align: center;
 
   a {
     &:where(:hover, :focus-visible) {
-      color: var(--color-blue-9);
+      color: var(--color-blue-6);
       text-decoration: underline;
     }
   }
